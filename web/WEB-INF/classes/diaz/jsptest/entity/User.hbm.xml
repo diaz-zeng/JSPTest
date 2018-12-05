@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="diaz.jsptest.entity">
+    <class name="User" table="userInfo">
+        <id name="userId" type="java.lang.Long" column="user_id">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="userName" type="java.lang.String" column="user_name" unique="true">
+        </property>
+        <property name="userPassword" type="java.lang.String" column="user_password">
+        </property>
+        <property name="userEmail" type="java.lang.String" column="user_email">
+        </property>
+        <property name="userPhone" type="java.lang.String" column="user_phone">
+        </property>
+        <property name="uuid" type="java.lang.String" column="user_uuid">
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="diaz.jsptest.entity">
+    <class name="File" table="fileInfo">
+        <id name="fileID" column="file_id">
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="fileName" type="java.lang.String" column="file_name">
+        </property>
+        <property name="fileType" type="java.lang.String" column="file_type">
+        </property>
+        <property name="uploadTime" type="java.sql.Date" column="upload_time">
+        </property>
+        <property name="uploadUser" type="java.lang.String" column="update_user">
+        </property>
+        <property name="description" type="java.lang.String" column="file_description">
+        </property>
+        <property name="points" type="java.lang.Integer" column="points">
+        </property>
+        <property name="downloadTimes" type="java.lang.Integer" column="download_times">
+        </property>
+        <array name="keyword" table="fileKeywords">
+            <key column="uid">
+            </key>
+            <list-index column="idx">
+            </list-index>
+            <element column="keyword" type="java.lang.String">
+            </element>
+        </array>
+        <property name="fileSize" type="java.lang.Double" column="file_size">
+        </property>
+    </class>
+</hibernate-mapping>
