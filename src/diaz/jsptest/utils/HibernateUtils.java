@@ -1,11 +1,10 @@
-package diaz.jsptest.persistence;
+package diaz.jsptest.utils;
 
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public final class HibernateUtils {
+public final class HibernateUtils{
     private static SessionFactory sessionFactory;
 
     static {
@@ -18,7 +17,7 @@ public final class HibernateUtils {
         }
     }
 
-    protected static Session getSession() {
-        return sessionFactory.openSession();
+    public static Session getCurrentSessionSession() {
+        return sessionFactory.getCurrentSession();
     }
 }

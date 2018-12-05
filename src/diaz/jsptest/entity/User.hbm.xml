@@ -16,7 +16,7 @@
         </property>
         <property name="userPhone" type="java.lang.String" column="user_phone">
         </property>
-        <property name="uuid" type="java.lang.String" column="user_uuid">
+        <property name="uuid" type="java.lang.String" column="user_uuid" unique="true">
         </property>
         <property name="photoName" type="java.lang.String" column="user_photo">
         </property>
